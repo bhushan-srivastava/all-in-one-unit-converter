@@ -69,3 +69,26 @@ p{
   border-radius: 2em;
   box-shadow: 5px 10px 18px rgb(136, 136, 136);
 }
+::placeholder { 
+  color: black;
+}
+/* small-size screen */
+@media screen and (max-width: 1009px)  { 
+  body{
+    max-height: 80%;
+    max-width: 80%;
+  }
+   fieldset{
+    padding: 2em;
+  }
+}
+/* small-size screen */
+@media screen and (max-height: 446px) {
+  body{
+    max-height: 80vh;
+    max-width: 80vw;
+  }
+   fieldset{
+    padding: 2em;
+  }
+}

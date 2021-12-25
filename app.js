@@ -204,6 +204,7 @@ var FactorsArr = [
     TimeFactor,
     VolumeFactor
 ];
+
 function displayFromSection() {
     var fromSelectLength = document.getElementById("fromSelect").length;
     if (fromSelectLength > 1) {
@@ -257,6 +258,7 @@ function displayAnswer() {
         document.getElementById("answer").style.display = 'inherit';
     }
 }
+
 function calculate() {
     var sourceUnit = categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("fromSelect").selectedIndex - 1];
 
@@ -281,4 +283,15 @@ function calculate() {
         result = parseFloat(result) - TemperatureIncrement[document.getElementById("toSelect").selectedIndex - 1];
     }
     return result;
+}
+
+window.onresize = function () { changeTextOfCategoriesOptionTag(); };
+window.onload = function () { changeTextOfCategoriesOptionTag(); };
+function changeTextOfCategoriesOptionTag() {
+    if (window.innerHeight < 446 || window.innerWidth < 1009) {
+        document.getElementById("changeTextForSmallScreen").textContent = 'Select';
+    }
+    else {
+        document.getElementById("changeTextForSmallScreen").textContent = 'Choose a measurement category to convert';
+    }
 }
