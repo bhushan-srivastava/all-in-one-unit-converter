@@ -74,8 +74,10 @@ p{
 /* small-size screen */
 @media screen and (max-width: 1009px)  { 
   body{
-    max-height: 80%;
-    max-width: 80%;
+    max-height: 90vw;
+    max-width: 90vw;
+    left: 0;
+    transform: translate(0%,0%);
   }
    fieldset{
     padding: 2em;
@@ -84,8 +86,10 @@ p{
 /* small-size screen */
 @media screen and (max-height: 446px) {
   body{
-    max-height: 80vh;
-    max-width: 80vw;
+    max-height: 90vw;
+    max-width: 90vw;
+    left: 0;
+    transform: translate(0%,0%);
   }
    fieldset{
     padding: 2em;
