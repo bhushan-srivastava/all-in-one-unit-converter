@@ -227,6 +227,7 @@ function displayToSection() {
     if (document.getElementById("answer").style.display == 'none') {
         if (document.getElementById("fromInput").value == "" || document.getElementById("fromSelect").selectedIndex == "0") {
             alert("Please enter a value to convert ");
+            document.getElementById("fromInput").focus();
         }
         else {
             var toSelectLength = document.getElementById("toSelect").length;
