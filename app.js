@@ -290,10 +290,10 @@ window.onload = function () { changeTextOfCategoriesOptionTag(); };
 function changeTextOfCategoriesOptionTag() {
     if (window.innerHeight < 446 || window.innerWidth < 1009) {
         document.getElementById("changeTextForSmallScreen").textContent = 'Select';
-        document.getElementById("fromSelect").[0].textContent = 'Select unit';
+        document.getElementById("fromSelect").firstChild.textContent = 'Select unit';
     }
     else {
         document.getElementById("changeTextForSmallScreen").textContent = 'Choose a measurement category to convert';
-        document.getElementById("fromSelect").[0].textContent = 'Choose a unit';
+        document.getElementById("fromSelect").firstChild.textContent = 'Choose a unit';
     }
 }
