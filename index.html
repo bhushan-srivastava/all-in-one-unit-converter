@@ -58,7 +58,8 @@
                 From
             </legend>
 
-            <input id="fromInput" type="number" placeholder="Enter a value" onkeyup="displayToSection()">
+            <input id="fromInput" type="number" min="0" placeholder="Enter a value"
+                onkeyup="validity.valid||(value='');displayToSection();">
             <select id="fromSelect" onchange="displayToSection()">
                 <option value="default" selected disabled hidden>Choose a unit</option>
             </select>
