@@ -225,11 +225,7 @@ function displayFromSection() {
 
 function displayToSection() {
     if (document.getElementById("answer").style.display == 'none') {
-        if (document.getElementById("fromInput").value == "" || document.getElementById("fromSelect").selectedIndex == "0") {
-            alert("Please enter a value to convert ");
-            document.getElementById("fromInput").focus();
-        }
-        else {
+        if (!(document.getElementById("fromInput").value == "" || document.getElementById("fromSelect").selectedIndex == "0")) {
             var toSelectLength = document.getElementById("toSelect").length;
             if (toSelectLength > 1) {
                 for (var i = toSelectLength; i > 0; i--) {
@@ -250,10 +246,7 @@ function displayToSection() {
 }
 
 function displayAnswer() {
-    if (document.getElementById("fromInput").value == "" || document.getElementById("toSelect").selectedIndex == "0") {
-        alert("Please enter a value to convert ");
-    }
-    else {
+    if (!(document.getElementById("fromInput").value == "" || document.getElementById("toSelect").selectedIndex == "0")) {
         var answerToPrint = calculate();
         document.getElementById("answer").innerHTML = document.getElementById("fromInput").value + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("fromSelect").selectedIndex - 1] + " is = " + answerToPrint + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("toSelect").selectedIndex - 1];
         document.getElementById("answer").style.display = 'inherit';
