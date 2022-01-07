@@ -3,4 +3,3 @@ plugins:
   - jekyll-sitemap
 title: All in One Unit Converter
 description: A powerful unit conversion tool.
-logo: favicon.png
