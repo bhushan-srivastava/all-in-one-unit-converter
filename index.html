@@ -1,10 +1,19 @@
+---
+layout: null
+title: All in One Unit Converter
+description: A powerful unit conversion tool.
+image: favicon.png
+---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% seo %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website Icon -->
+    <link rel="icon" href="favicon.png" type="image/png">
     <title>All in One Unit Converter</title>
     <!-- external style sheet -->
     <link rel="stylesheet" id="myStyleSheet" href="lightmode.css">
@@ -36,8 +45,7 @@
 
             <select id="categories" onchange="displayFromSection()">
                 <option value="default" selected disabled hidden id="changeTextForSmallScreen">Choose a measurement
-                    category
-                    to convert</option>
+                    category to convert</option>
                 <option value="Area">Area</option>
                 <option value="Length">Length</option>
                 <option value="Mass">Mass</option>
