@@ -23,14 +23,14 @@ description: A powerful unit conversion tool.
     <!-- Icons by Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="app.js"></script>
 </head>
 
 <body>
     <div class="header" id="header">
         <h1 class="title" id="title">
             All in One Unit Converter
-            <a href="#" onclick="change();"><i class="fa fa-adjust"></i></a>
+            <a href="#" onclick="change();" onmouseover="mouseOverFunction();" onmouseout="mouseOutFunction();"><i
+                    class="fa fa-adjust"></i></a>
         </h1>
     </div>
 
@@ -40,7 +40,8 @@ description: A powerful unit conversion tool.
                 What to convert
             </legend>
 
-            <select id="categories" onchange="displayFromSection()">
+            <select id="categories" onchange="displayFromSection()" onmouseover="mouseOverFunction();"
+                onmouseout="mouseOutFunction();">
                 <option value="default" selected disabled hidden id="changeTextForSmallScreen">Choose a measurement
                     category to convert</option>
                 <option value="Area">Area</option>
@@ -64,8 +65,10 @@ description: A powerful unit conversion tool.
             </legend>
 
             <input id="fromInput" type="number" min="0" placeholder="Enter a value"
-                onkeyup="validity.valid||(value='');displayToSection();">
-            <select id="fromSelect" onchange="displayToSection()">
+                onkeyup="validity.valid||(value='');displayToSection();" onmouseover="mouseOverFunction();"
+                onmouseout="mouseOutFunction();">
+            <select id="fromSelect" onchange="displayToSection()" onmouseover="mouseOverFunction();"
+                onmouseout="mouseOutFunction();">
                 <option value="default" selected disabled hidden>Choose a unit</option>
             </select>
 
@@ -81,7 +84,8 @@ description: A powerful unit conversion tool.
                 To
             </legend>
 
-            <select id="toSelect" onchange="displayAnswer()">
+            <select id="toSelect" onchange="displayAnswer()" onmouseover="mouseOverFunction();"
+                onmouseout="mouseOutFunction();">
                 <option value="default" disabled hidden>Choose a unit</option>
             </select>
             <p id="answer">
@@ -89,8 +93,13 @@ description: A powerful unit conversion tool.
             </p>
 
         </fieldset>
+
+        <div id="cursors">
+        </div>
+
     </div>
 
+    <script src="app.js"></script>
 </body>
 
 </html>

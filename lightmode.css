@@ -5,7 +5,9 @@ font-family: 'Comfortaa', cursive;
 word-wrap: break-word;
 margin: 0;
 overflow-wrap: break-word;
-background-color: white;
+/* background-color: white; */
+background-color: #EFE1CE;
+overflow-x: hidden;
 }
 body{
   text-align: center;
@@ -25,7 +27,7 @@ a{
   color: black;
 }
 fieldset{
-  border: solid 0.5px grey;
+  border: solid 0.5px #111;
   border-radius: 50em;
   /* box-shadow: 5px 10px 18px rgb(136, 136, 136); */
 }
@@ -33,9 +35,10 @@ input{
   /* font by Google Font */
   font-family: 'Comfortaa', cursive;
   text-align: center;
-  border: solid 0.5px grey;
+  border: solid 0.5px #111;
   border-radius: 50em;
   height: 2em;
+  background-color: #EFE1CE;
 }
 select{
   /* font by Google Font */
@@ -44,11 +47,13 @@ select{
   border-radius: 50em;
   height: 2em;
   text-align: center;
+  background-color: #EFE1CE;
 }
 option{
   /* font by Google Font */
   font-family: 'Comfortaa', cursive;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #EFE1CE;
 }
 #from{
   display: none;
@@ -59,14 +64,26 @@ option{
 #answer{
   display: none;
 }
+#cursors {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  width: 10px;
+  height: 10px;
+  background-color: #111;
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 p{
   padding: 0 1em 0 1em;
 }
 .main{
   padding: 4em;
-  border: solid 0.5px grey;
+  border: solid 0.5px #111;
   border-radius: 2em;
-  box-shadow: 5px 10px 18px rgb(136, 136, 136);
+  box-shadow: 5px 10px 18px #111;
 }
 ::placeholder { 
   color: black;
