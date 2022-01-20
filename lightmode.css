@@ -99,6 +99,9 @@ p{
    fieldset{
     padding: 2em;
   }
+  #cursors {
+    display: none;
+  }
 }
 /* small-size screen */
 @media screen and (max-height: 446px) {
@@ -110,5 +113,8 @@ p{
   }
    fieldset{
     padding: 2em;
+  }
+  #cursors {
+    display: none;
   }
 }
