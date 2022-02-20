@@ -257,7 +257,12 @@ function displayToSection() {
 function displayAnswer() {
     if (!(document.getElementById("fromInput").value == "" || document.getElementById("toSelect").selectedIndex == "0")) {
         var answerToPrint = calculate();
-        document.getElementById("answer").innerHTML = document.getElementById("fromInput").value + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("fromSelect").selectedIndex - 1] + " is = " + answerToPrint + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("toSelect").selectedIndex - 1];
+        if (categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("toSelect").selectedIndex - 1] != "Foot (ft)") {
+            document.getElementById("answer").innerHTML = document.getElementById("fromInput").value + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("fromSelect").selectedIndex - 1] + " is = " + answerToPrint + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("toSelect").selectedIndex - 1];
+        }
+        else {
+            document.getElementById("answer").innerHTML = document.getElementById("fromInput").value + " " + categoriesArr[document.getElementById("categories").selectedIndex - 1][document.getElementById("fromSelect").selectedIndex - 1] + " is = " + answerToPrint;
+        }
         document.getElementById("answer").style.display = 'inherit';
     }
 }
@@ -285,6 +290,23 @@ function calculate() {
     if (categoriesArr[document.getElementById("categories").selectedIndex - 1] == Temperature) {
         result = parseFloat(result) - TemperatureIncrement[document.getElementById("toSelect").selectedIndex - 1];
     }
+
+    if (targetUnit == "Foot (ft)") {
+        var str = result + " " + targetUnit + "<br>" + document.getElementById("fromInput").value + " " + sourceUnit + " is = ";
+
+        var intResult = parseInt(result);
+
+        var result = result % intResult;
+
+        result = result * FactorsArr[1][8];
+
+        result = result / FactorsArr[1][7];
+
+        str = str + intResult + " " + targetUnit + " and " + result + " " + "Inch (in)";
+
+        return str;
+    }
+
     return result;
 }
 
